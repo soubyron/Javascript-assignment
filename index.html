@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablely | Find Your Perfect Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Tablely</a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#restaurants">Restaurants</a>
+                <a href="#bookings">My Bookings</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">DISCOVER • DINE • ENJOY</p>
+                <h1>Find your perfect table.</h1>
+                <p class="hero-text">
+                    Discover great restaurants, explore different cuisines,
+                    and find a table for your next meal.
+                </p>
+                <a href="#restaurants" class="primary-button">
+                    Explore Restaurants
+                </a>
+            </div>
+        </section>
+
+
+        <!-- Restaurant Section -->
+        <section id="restaurants" class="restaurants-section">
+            <div class="section-heading">
+                <p class="eyebrow">EXPLORE</p>
+                <h2>Restaurants you'll love</h2>
+                <p>
+                    Browse our selection of restaurants and find somewhere
+                    perfect for your next meal.
+                </p>
+            </div>
+
+
+            <!-- Search and filter -->
+            <div class="search-area">
+                <div class="search-box">
+                    <label for="restaurant-search">
+                        Search restaurants
+                    </label>
+
+                    <input type="text" id="restaurant-search" placeholder="Search by restaurant name...">
+                </div>
+
+
+                <div class="filter-box">
+                    <label for="cuisine-filter">
+                        Cuisine
+                    </label>
+
+                    <select id="cuisine-filter">
+                        <option value="all">All cuisines</option>
+                        <option value="italian">Italian</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="indian">Indian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="steakhouse">Steakhouse</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- Restaurant cards -->
+            <div class="restaurant-grid">
+
+                <!-- Restaurant 1 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image image-one">
+                        <span class="cuisine-tag">Italian</span>
+                    </div>
+
+                    <div class="restaurant-content">
+                        <div class="restaurant-title">
+                            <h3>The Garden</h3>
+                            <button class="favourite-button" type="button">
+                                ♡
+                            </button>
+                        </div>
+
+                        <p class="location">📍 Dublin</p>
+                        <p class="description">
+                            Modern Italian dining with fresh pasta,
+                            seasonal ingredients and classic dishes.
+                        </p>
+
+                        <div class="restaurant-info">
+                            <span>€€</span>
+                            <span>★ 4.7</span>
+                        </div>
+
+                        <button class="book-button" type="button">
+                            Book a Table
+                        </button>
+                    </div>
+                </article>
+
+
+                <!-- Restaurant 2 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image image-two">
+                        <span class="cuisine-tag">Japanese</span>
+                    </div>
+                    <div class="restaurant-content">
+
+                        <div class="restaurant-title">
+                            <h3>Sakura</h3>
+                            <button class="favourite-button" type="button">
+                                ♡
+                            </button>
+                        </div>
+
+                        <p class="location">📍 Dublin</p>
+                        <p class="description">
+                            Contemporary Japanese cuisine featuring sushi,
+                            ramen and traditional favourites.
+                        </p>
+
+                        <div class="restaurant-info">
+                            <span>€€€</span>
+                            <span>★ 4.8</span>
+                        </div>
+
+                        <button class="book-button" type="button">
+                            Book a Table
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- Restaurant 3 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image image-three">
+                        <span class="cuisine-tag">Steakhouse</span>
+                    </div>
+
+                    <div class="restaurant-content">
+                        <div class="restaurant-title">
+                            <h3>The Grill House</h3>
+                            <button class="favourite-button" type="button">
+                                ♡
+                            </button>
+                        </div>
+
+                        <p class="location">📍 Dublin</p>
+                        <p class="description">
+                            Premium steaks, grilled meats and carefully
+                            selected sides in a relaxed setting.
+                        </p>
+
+                        <div class="restaurant-info">
+                            <span>€€€</span>
+                            <span>★ 4.6</span>
+                        </div>
+
+                        <button class="book-button" type="button">
+                            Book a Table
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- Restaurant 4 -->
+                <article class="restaurant-card">
+                    <div class="restaurant-image image-four">
+                        <span class="cuisine-tag">Indian</span>
+                    </div>
+
+                    <div class="restaurant-content">
+                        <div class="restaurant-title">
+                            <h3>Spice Route</h3>
+                            <button class="favourite-button" type="button">
+                                ♡
+                            </button>
+                        </div>
+
+                        <p class="location">📍 Dublin</p>
+                        <p class="description">
+                            Rich Indian flavours, traditional recipes and
+                            modern interpretations of classic dishes.
+                        </p>
+
+                        <div class="restaurant-info">
+                            <span>€€</span>
+                            <span>★ 4.5</span>
+                        </div>
+
+                        <button class="book-button" type="button">
+                            Book a Table
+                        </button>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Bookings Section -->
+        <section id="bookings" class="bookings-section">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR TABLE</p>
+                <h2>My Bookings</h2>
+                <p>
+                    Your upcoming restaurant reservations will appear here.
+                </p>
+            </div>
+
+
+            <div class="empty-booking">
+                <div class="empty-icon">🍽️</div>
+                <h3>No bookings yet</h3>
+                <p>
+                    Once you make a reservation, your booking will appear here.
+                </p>
+                <a href="#restaurants" class="secondary-button">
+                    Find a Restaurant
+                </a>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div>
+                    <p class="eyebrow">ABOUT TABLELY</p>
+
+                    <h2>Good food starts with a good table.</h2>
+                </div>
+                <p>
+                    Tablely makes it simple to discover restaurants and find
+                    the perfect place for your next meal. Explore different
+                    cuisines, discover new restaurants and reserve your table
+                    in just a few steps.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-heading">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h2>Contact us</h2>
+                <p>
+                    Have a question? Send us a message.
+                </p>
+            </div>
+
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+                </div>
+
+
+                <button type="submit" class="primary-button">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Tablely. All rights reserved.</p>
+    </footer>
+</body>
+</html>
