@@ -17,7 +17,7 @@
             <nav>
                 <a href="#home">Home</a>
                 <a href="#restaurants">Restaurants</a>
-                <a href="bookings.html">My Bookings</a>
+                <a href="#bookings">My Bookings</a>
                 <a href="#about">About</a>
             </nav>
         </div>
@@ -216,27 +216,40 @@
 
 
         <!-- Bookings Section -->
-        <section id="bookings" class="bookings-section">
-            <div class="section-heading">
-                <p class="eyebrow">YOUR TABLE</p>
-                <h2>My Bookings</h2>
-                <p>
-                    Your upcoming restaurant reservations will appear here.
-                </p>
-            </div>
+        <section id="bookings">
+        <h2>My Bookings</h2>
+
+        <form id="booking-form">
+            <label for="booking-restaurant">Restaurant</label>
+
+            <select id="booking-restaurant">
+                <option value="">Select a restaurant</option>
+                <option value="The Green Table">The Green Table</option>
+                <option value="Sakura House">Sakura House</option>
+                <option value="Spice Garden">Spice Garden</option>
+                <option value="The Burger Spot">The Burger Spot</option>
+            </select>
 
 
-            <div class="empty-booking">
-                <div class="empty-icon">🍽️</div>
-                <h3>No bookings yet</h3>
-                <p>
-                    Once you make a reservation, your booking will appear here.
-                </p>
-                <a href="#restaurants" class="secondary-button">
-                    Find a Restaurant
-                </a>
-            </div>
-        </section>
+            <label for="booking-date">Date</label>
+            <input type="date" id="booking-date">
+            <label for="booking-time">Time</label>
+
+            <input type="time" id="booking-time">
+
+            <label for="booking-guests">Number of guests</label>
+
+            <input
+                type="number"
+                id="booking-guests"
+                min="1"
+                max="10">
+
+            <button type="submit">Confirm Reservation</button>
+
+            <p id="booking-message"></p>
+        </form>
+    </section>
 
 
         <!-- About Section -->

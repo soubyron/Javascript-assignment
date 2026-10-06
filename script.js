@@ -73,3 +73,22 @@ heartButtons.forEach((heartButton) => {
 });
 
 
+
+const bookingForm = document.getElementById('booking-form');
+const bookingMessage = document.getElementById('booking-message');
+
+bookingForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const restaurant = document.getElementById('booking-restaurant').value;
+    const date = document.getElementById('booking-date').value;
+    const time = document.getElementById('booking-time').value;
+    const guests = document.getElementById('booking-guests').value;
+
+     if (restaurant === "" || date === "" || time === "" || guests === "") {
+        bookingMessage.textContent = "Please fill in all fields."
+        return;
+    }
+
+    bookingMessage.textContent = "Booking is confirmed";
+});
