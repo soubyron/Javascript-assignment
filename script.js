@@ -30,8 +30,8 @@ function filterRestaurants() {
         const matchesSearch = restaurantName.includes(searchTerm);
 
         const matchesCuisine =
-              selectedCuisine === "all" || 
-              cuisine === selectedCuisine;
+            selectedCuisine === "all" ||
+            cuisine === selectedCuisine;
 
         if (matchesSearch && matchesCuisine) {
             card.style.display = "block";
@@ -47,16 +47,29 @@ cuisineFilter.addEventListener("change", filterRestaurants);
 
 
 
-const heartButton = document.querySelector('.favourite-button');
 
-heartButton.addEventListener('click', () =>{
-    heartButton.classList.toggle('active');
+/*
+1. Get favourite button
+2. Change favourite button when clicked
+3. Change back to normal when clicked again after initial click
+*/
 
-    if (heartButton.classList.contains('active')) {
-        heartButton.textContent = '♥';
-    } else { heartButton.textContent = '♡';
 
-    }
+const heartButtons = document.querySelectorAll('.favourite-button');
+
+heartButtons.forEach((heartButton) => {
+
+    heartButton.addEventListener('click', () => {
+        heartButton.classList.toggle('active');
+
+        if (heartButton.classList.contains('active')) {
+            heartButton.textContent = '♥';
+        } else {
+            heartButton.textContent = '♡';
+
+        }
+    });
+
 });
 
 
