@@ -384,6 +384,51 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
+/* BOOKING FORM */
+#booking-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f5f2ee;
+    border-radius: 10px;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#booking-form input,
+#booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#booking-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#booking-form button:hover {
+    background-color: #444;
+}
+
+#booking-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
 
 /* ABOUT */
 .about-section {

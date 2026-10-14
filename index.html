@@ -217,39 +217,37 @@
 
         <!-- Bookings Section -->
         <section id="bookings">
-        <h2>My Bookings</h2>
+            <h2>My Bookings</h2>
 
-        <form id="booking-form">
-            <label for="booking-restaurant">Restaurant</label>
+            <form id="booking-form">
+                <label for="booking-restaurant">Restaurant</label>
 
-            <select id="booking-restaurant">
-                <option value="">Select a restaurant</option>
-                <option value="The Green Table">The Green Table</option>
-                <option value="Sakura House">Sakura House</option>
-                <option value="Spice Garden">Spice Garden</option>
-                <option value="The Burger Spot">The Burger Spot</option>
-            </select>
+                <select id="booking-restaurant">
+                    <option value="">Select a restaurant</option>
+                    <option value="The Green Table">The Green Table</option>
+                    <option value="Sakura House">Sakura House</option>
+                    <option value="Spice Garden">Spice Garden</option>
+                    <option value="The Burger Spot">The Burger Spot</option>
+                </select>
 
 
-            <label for="booking-date">Date</label>
-            <input type="date" id="booking-date">
-            <label for="booking-time">Time</label>
+                <label for="booking-date">Date</label>
+                <input type="date" id="booking-date">
+                <label for="booking-time">Time</label>
 
-            <input type="time" id="booking-time">
+                <input type="time" id="booking-time">
 
-            <label for="booking-guests">Number of guests</label>
+                <label for="booking-guests">Number of guests</label>
 
-            <input
-                type="number"
-                id="booking-guests"
-                min="1"
-                max="10">
+                <input type="number" id="booking-guests" min="1" max="10">
 
-            <button type="submit">Confirm Reservation</button>
+                <button type="submit">Confirm Reservation</button>
 
-            <p id="booking-message"></p>
-        </form>
-    </section>
+                <p id="booking-message"></p>
+            </form>
+
+            <div id="bookings-list"></div>
+        </section>
 
 
         <!-- About Section -->
@@ -316,4 +314,5 @@
         <p>© 2026 Tablely. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

@@ -77,7 +77,9 @@ heartButtons.forEach((heartButton) => {
 const bookingForm = document.getElementById('booking-form');
 const bookingMessage = document.getElementById('booking-message');
 
-bookingForm.addEventListener('submit', function(event){
+const bookings = [];
+
+bookingForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const restaurant = document.getElementById('booking-restaurant').value;
@@ -85,10 +87,35 @@ bookingForm.addEventListener('submit', function(event){
     const time = document.getElementById('booking-time').value;
     const guests = document.getElementById('booking-guests').value;
 
-     if (restaurant === "" || date === "" || time === "" || guests === "") {
+    const today = new Date().toISOString().split('T')[0];
+
+    if (restaurant === "" || date === "" || time === "" || guests === "") {
         bookingMessage.textContent = "Please fill in all fields."
         return;
     }
 
-    bookingMessage.textContent = "Booking is confirmed";
+    if (date < today) {
+        bookingMessage.textContent = "Please choose a future date.";
+        return;
+    }
+
+    const booking = {
+        restaurant: restaurant,
+        date: date,
+        time: time,
+        guests: guests
+    };
+
+    bookings.push(booking);
+
+    const bookingsList = document.getElementById("bookings-list");
+    const bookingItem = document.createElement("p");
+
+    bookingItem.textContent = booking.restaurant;
+
+    bookingsList.appendChild(bookingItem);
+
+
+    bookingMessage.textContent = "Booking is confirmed!";
+    bookingForm.reset();
 });
