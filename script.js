@@ -109,9 +109,25 @@ bookingForm.addEventListener('submit', function (event) {
     bookings.push(booking);
 
     const bookingsList = document.getElementById("bookings-list");
-    const bookingItem = document.createElement("p");
+    const bookingItem = document.createElement("div");
 
-    bookingItem.textContent = booking.restaurant;
+    bookingItem.classList.add("booking-card");
+
+    const restaurantName = document.createElement("h3");
+    const bookingDate = document.createElement("p");
+    const bookingTime = document.createElement("p");
+    const bookingGuests = document.createElement("p");
+
+    restaurantName.textContent = booking.restaurant;
+    bookingDate.textContent = "Date: " + booking.date;
+    bookingTime.textContent = "Time: " + booking.time;
+    bookingGuests.textContent = "Guests: " + booking.guests;
+
+    bookingItem.appendChild(restaurantName);
+    bookingItem.appendChild(bookingDate);
+    bookingItem.appendChild(bookingTime);
+    bookingItem.appendChild(bookingGuests);
+
 
     bookingsList.appendChild(bookingItem);
 

@@ -430,6 +430,19 @@ nav a:hover {
 }
 
 
+.booking-card {
+    background-color: #f5f2ee;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-left: 4px solid #2d2d2d;
+    color: #2d2d2d;
+    line-height: 1.8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+
 /* ABOUT */
 .about-section {
     background-color: #25221f;
