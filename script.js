@@ -74,6 +74,19 @@ heartButtons.forEach((heartButton) => {
 
 
 
+/* 
+1. Get booking form
+2. Get dropdown menu for restaurant
+3. Get calendar, time and number of guests for booking
+4. Get submit button 
+
+5. Get message after booking has been submitted, get message when fields have not been filled
+6. Store booking in array
+7. Store booking on webpage
+
+8. Make sure booking cannot be made on a date in the past
+*/
+
 const bookingForm = document.getElementById('booking-form');
 const bookingMessage = document.getElementById('booking-message');
 
