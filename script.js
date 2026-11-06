@@ -52,33 +52,51 @@ cuisineFilter.addEventListener("change", filterRestaurants);
 1. Get favourite button
 2. Change favourite button when clicked
 3. Change back to normal when clicked again after initial click
+
+4. Add favourited restaturant to favourites section at the bottom of the page
 */
 
 
 const heartButtons = document.querySelectorAll('.favourite-button');
+const favouritesList = document.getElementById('favourites-list');
 
 heartButtons.forEach((heartButton) => {
-
     heartButton.addEventListener('click', () => {
+
+        const restaurantCard = heartButton.closest('.restaurant-card');
+        const restaurantName = restaurantCard.querySelector('h3').textContent;
+        const cuisine = restaurantCard.querySelector('.cuisine-tag').textContent;
+
         heartButton.classList.toggle('active');
 
         if (heartButton.classList.contains('active')) {
             heartButton.textContent = '♥';
+
+            const favouriteItem = document.createElement('div');
+            favouriteItem.classList.add('favourite-card');
+            favouriteItem.dataset.restaurant = restaurantName;
+
+            const name = document.createElement('h3');
+            const cuisineType = document.createElement('p');
+
+            name.textContent = restaurantName;
+            cuisineType.textContent = cuisine;
+
+            favouriteItem.appendChild(name);
+            favouriteItem.appendChild(cuisineType);
+
+            favouritesList.appendChild(favouriteItem);
+
         } else {
             heartButton.textContent = '♡';
 
+            const savedFavourite = Array.from(favouritesList.children)
+                .find(item => item.dataset.restaurant === restaurantName);
+
+            if (savedFavourite) {
+                savedFavourite.remove();
+            }
         }
-    });
-
-});
-
-const bookButtons = document.querySelectorAll('.book-button');
-
-bookButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        document.querySelector('#bookings').scrollIntoView({
-            behavior: 'smooth'
-        });
     });
 });
 
@@ -158,3 +176,6 @@ bookingForm.addEventListener('submit', function (event) {
     bookingMessage.textContent = "Booking is confirmed!";
     bookingForm.reset();
 });
+
+
+
