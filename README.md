@@ -6,7 +6,7 @@ This is an application that enables users to browse their favourite cuisines and
 
 ## Features
 - Searching restaurants by name or with a dropdown menu
-- Favouriting restaurants you like by clicking the heart symbol in the restaurant card. You can aslo un-favourite if you do not have interest in the restaurant anymore.
+- Favouriting restaurants you like by clicking the heart symbol in the restaurant card. You can aslo un-favourite if you do not have interest in the restaurant anymore. When you favourite a restaurant it saves in the "favourites" section at the bottom of the page. When un-favourited that restaurant is removed from the list.
 - A single page application which sends you to a section of a page when you click on the navigation button in the navbar. For example, clicking "my bookings" scrolls doen to the my bookings section in the page.
 - For booking there is a form where you can choose your desired choices and confirm a reservation. This creates a little card under the "my bookings" section.
 
