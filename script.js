@@ -100,6 +100,16 @@ heartButtons.forEach((heartButton) => {
     });
 });
 
+const bookButtons = document.querySelectorAll('.book-button');
+
+bookButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelector('#bookings').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 
 
 /* 
