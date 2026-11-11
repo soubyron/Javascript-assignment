@@ -66,6 +66,7 @@ heartButtons.forEach((heartButton) => {
         const restaurantCard = heartButton.closest('.restaurant-card');
         const restaurantName = restaurantCard.querySelector('h3').textContent;
         const cuisine = restaurantCard.querySelector('.cuisine-tag').textContent;
+        const restaurantImage = restaurantCard.querySelector('.restaurant-image img');
 
         heartButton.classList.toggle('active');
 
@@ -75,6 +76,15 @@ heartButtons.forEach((heartButton) => {
             const favouriteItem = document.createElement('div');
             favouriteItem.classList.add('favourite-card');
             favouriteItem.dataset.restaurant = restaurantName;
+
+
+            const image = document.createElement('img');
+            image.src = restaurantImage.src;
+            image.alt = restaurantImage.alt;
+            
+            image.classList.add('favourite-image');
+            favouriteItem.appendChild(image);
+
 
             const name = document.createElement('h3');
             const cuisineType = document.createElement('p');

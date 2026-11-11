@@ -68,6 +68,8 @@ const today = new Date().toISOString().split('T')[0];
 ```
 This code helped preventing me from choosing past dates and only let me choose the current day or future days.
 
+To add more life to the favourite cards, I decided to add images of the restaurants to the cards but i realised that when I favourited only one restaurant, the card resized according to my CSS but there was no image in the card. After going through series of solutions I realised I had not created and image element so even though the card was resized there was no image. But I got an idea to rather make the image a square and place it ti the far left of the card with the other information following rather than creating another big card which almost replicates the main cards at the beginning of the page. `Grid: display` and `grid-template-columns` helped me contain everything in the cards and make the cards appear horizontally with a gap instead of vertically.
+
 ## AI Support
 AI was used mostly to figure out the problems mentioned above. In some cases it helped me remember what I have to do and in some cases I was totally stuck (see screenshots in project folder to know how AI was used). The case of using `const today = new Date().toISOString().split('T') [0];` was discovered using AI as i did not know how to go about it.
 *Most of the text in the cards and webpage was AI generated*
